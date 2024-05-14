@@ -23,6 +23,9 @@ RUN apt update \
         supervisor nginx sudo net-tools zenity xz-utils \
         dbus-x11 x11-utils alsa-utils \
         mesa-utils libgl1-mesa-dri \
+    && add-apt-repository ppa:deadsnakes/ppa \
+    && apt update \
+    && apt install -y python3.10 python3.10-venv \
     && apt autoclean -y \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
