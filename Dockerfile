@@ -26,6 +26,8 @@ RUN apt update \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt update \
     && apt install -y python3.10 python3.10-venv \
+    # install playwright deps
+    && apt install -y libnss3 libnspr4 \
     && apt autoclean -y \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
