@@ -25,7 +25,7 @@ RUN apt update \
         mesa-utils libgl1-mesa-dri \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt update \
-    && apt install -y git-core python3.10 python3.10-venv \
+    && apt install -y vim git-core python3.10 python3.10-venv \
     # install playwright deps
     && apt install -y libnss3 libnspr4 \
     && apt autoclean -y \
