@@ -31,6 +31,7 @@ RUN apt update \
     # install RU and EN locales
     && locale-gen ru_RU.UTF-8 en_US.utf8 \
     && update-locale \
+    && update-locale LANG=ru_RU.UTF-8 LC_ALL=ru_RU.UTF-8 \
     && apt autoclean -y \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
