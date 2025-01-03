@@ -77,6 +77,7 @@ stopsignal=KILL
 
 [program:x11vnc]
 priority=20
+environment=LANG="ru_RU.UTF-8"
 command=x11vnc -display :1 -xkb -forever -shared -repeat -capslock
 
 [program:novnc]
